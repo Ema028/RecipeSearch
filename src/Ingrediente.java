@@ -12,6 +12,7 @@ public class Ingrediente{
 	}
 	
 	public boolean temCaracteristica(Caracteristica caracteristica){
+<<<<<<< HEAD
         for(Caracteristica c: caracteristicas){
 			if(c == caracteristica){
 				return true;
@@ -19,6 +20,15 @@ public class Ingrediente{
 		}
 		return false;
     }
+=======
+        	for(Caracteristica c: caracteristicas){
+				if(c.equals(caracteristica)){
+					return true;
+			}
+		}
+		return false;
+    	}
+>>>>>>> master
 
 	public void adicionarCaracteristica(Caracteristica caracteristica){
         	if (!temCaracteristica(caracteristica)){
