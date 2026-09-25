@@ -8,4 +8,19 @@ public class Ingrediente{
         	this.nome = nome;
         	this.caracteristicas = new ArrayList<>();
 	}
+	
+	public boolean temCaracteristica(Caracteristica caracteristica){
+        	for(Caracteristica c: caracteristicas){
+			if(c.equals(caracteristica){
+				return true;
+			}
+		}
+		return false;
+    	}
+
+	public void adicionarCaracteristica(Caracteristica caracteristica){
+        	if (!temCaracteristica(caracteristica)){
+            		caracteristicas.add(caracteristica);
+        	}
+    	}
 }
