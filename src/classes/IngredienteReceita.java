@@ -1,4 +1,4 @@
-package src;
+package classes;
 
 public class IngredienteReceita {
     private Ingrediente ingrediente;

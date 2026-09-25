@@ -1,6 +1,8 @@
-package src;
+package classes;
 
 import java.util.ArrayList;
+
+import enums.Caracteristica;
 
 public abstract class Restricao{
     protected String nome;

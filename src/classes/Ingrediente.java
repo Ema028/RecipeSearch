@@ -1,24 +1,26 @@
-package src;
+package classes;
 
 import java.util.ArrayList;
+
+import enums.Caracteristica;
 
 public class Ingrediente{
 	private String nome;
 	private ArrayList<Caracteristica> caracteristicas;
 
 	public Ingrediente(String nome){
-        this.nome = nome;
-        this.caracteristicas = new ArrayList<>();
+        	this.nome = nome;
+        	this.caracteristicas = new ArrayList<>();
 	}
 	
 	public boolean temCaracteristica(Caracteristica caracteristica){
-        for(Caracteristica c: caracteristicas){
-			if(c == caracteristica){
-				return true;
+        	for(Caracteristica c: caracteristicas){
+				if(c.equals(caracteristica)){
+					return true;
 			}
 		}
 		return false;
-    }
+    	}
 
 	public void adicionarCaracteristica(Caracteristica caracteristica){
         	if (!temCaracteristica(caracteristica)){
@@ -33,4 +35,5 @@ public class Ingrediente{
 	public ArrayList<Caracteristica> getCaracteristicas() {
     	return caracteristicas;
 	}
+	
 }
