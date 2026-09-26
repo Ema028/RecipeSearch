@@ -9,24 +9,24 @@ public class Ingrediente{
 	private ArrayList<Caracteristica> caracteristicas;
 
 	public Ingrediente(String nome){
-        	this.nome = nome;
-        	this.caracteristicas = new ArrayList<>();
+        this.nome = nome;
+        this.caracteristicas = new ArrayList<>();
 	}
 	
 	public boolean temCaracteristica(Caracteristica caracteristica){
-        	for(Caracteristica c: caracteristicas){
-				if(c.equals(caracteristica)){
-					return true;
+        for(Caracteristica c: caracteristicas){
+			if(c.equals(caracteristica)){
+				return true;
 			}
 		}
 		return false;
-    	}
+    }
 
 	public void adicionarCaracteristica(Caracteristica caracteristica){
-        	if (!temCaracteristica(caracteristica)){
-            		caracteristicas.add(caracteristica);
-        	}
-    	}
+        if (!temCaracteristica(caracteristica)){
+            caracteristicas.add(caracteristica);
+        }
+    }
 
 	public String getNome(){
     	return nome;
