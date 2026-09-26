@@ -1,6 +1,7 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Receita {
     private String nome;
@@ -37,6 +38,15 @@ public class Receita {
         return ingredientes;
     }
 
-    
-
+    @Override
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Receita receita = (Receita) o;
+        return Objects.equals(nome, receita.nome);
+    }
 }
