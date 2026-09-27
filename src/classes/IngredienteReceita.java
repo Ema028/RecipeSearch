@@ -1,5 +1,7 @@
 package classes;
 
+import java.util.Objects;
+
 public class IngredienteReceita {
     private Ingrediente ingrediente;
     private double quantidade;
@@ -24,6 +26,10 @@ public class IngredienteReceita {
         return ingrediente;
     }
 
+    public void printInfo(){
+        System.out.printf("%d%s de %s/n", quantidade, unidade, ingrediente.getNome());
+    }
+
     public double getQuantidade() {
         return quantidade;
     }
@@ -32,4 +38,15 @@ public class IngredienteReceita {
         return unidade;
     }
     
+    @Override
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        IngredienteReceita ingredienteReceita = (IngredienteReceita) o;
+        return Objects.equals(ingrediente.getNome(), ingredienteReceita.getIngrediente().getNome());
+    }
 }
