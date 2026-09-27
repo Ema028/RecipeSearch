@@ -3,6 +3,8 @@ package classes;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import enums.Caracteristica;
+
 public class Receita {
     private String nome;
     private String modoPreparo;
@@ -34,8 +36,30 @@ public class Receita {
         return culinaria;
     }
 
-    public ArrayList<IngredienteReceita> getIngredientes() {
-        return ingredientes;
+    public void printInfo(){
+        System.out.println("Receita: "+ nome);
+        System.out.println("Lista de Ingredientes: ");
+        for(IngredienteReceita i: ingredientes){
+			i.printInfo();
+		}
+        System.out.println("Modo de preparo: "+ modoPreparo);
+    }
+
+    public void adicionarIngrediente(IngredienteReceita ingrediente){
+        for(IngredienteReceita i: ingredientes){
+			if(i.equals(ingrediente)){
+				ingredientes.add(ingrediente);
+			}
+		}
+    }
+
+    public boolean temCaracteristica(Caracteristica caracteristica){
+        for(IngredienteReceita i: ingredientes){
+			if(i.getIngrediente().temCaracteristica(caracteristica)){
+				return true;
+			}
+		}
+		return false;
     }
 
     @Override
@@ -48,5 +72,5 @@ public class Receita {
         }
         Receita receita = (Receita) o;
         return Objects.equals(nome, receita.nome);
-    }
+    }    
 }
