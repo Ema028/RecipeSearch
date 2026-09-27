@@ -15,7 +15,7 @@ public class Ingrediente{
 	
 	public boolean temCaracteristica(Caracteristica caracteristica){
         for(Caracteristica c: caracteristicas){
-			if(c.equals(caracteristica)){
+			if(c == caracteristica){
 				return true;
 			}
 		}
