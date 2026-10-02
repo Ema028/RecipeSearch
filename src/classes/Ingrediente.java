@@ -3,8 +3,9 @@ package classes;
 import java.util.ArrayList;
 
 import enums.Caracteristica;
+import interfaces.Validavel;
 
-public class Ingrediente{
+public class Ingrediente implements Validavel{
 	private String nome;
 	private ArrayList<Caracteristica> caracteristicas;
 
@@ -34,6 +35,13 @@ public class Ingrediente{
 
 	public ArrayList<Caracteristica> getCaracteristicas() {
     	return caracteristicas;
+	}
+	
+	public boolean validar(){
+		if(nome== null){
+			return false;
+		}
+		return true;
 	}
 	
 }

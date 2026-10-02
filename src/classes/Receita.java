@@ -2,17 +2,18 @@ package classes;
 
 import java.util.ArrayList;
 import java.util.Objects;
-
 import enums.Caracteristica;
+import enums.Culinaria;
+import interfaces.Validavel;
 
-public class Receita {
+public class Receita implements Validavel {
     private String nome;
     private String modoPreparo;
     private int tempoPreparo;
-    private String culinaria;
+    private Culinaria culinaria;
     private ArrayList<IngredienteReceita> ingredientes;
 
-    public Receita(String nome, String modoPreparo, int tempoPreparo, String culinaria) {
+    public Receita(String nome, String modoPreparo, int tempoPreparo, Culinaria culinaria) {
         this.nome = nome;
         this.modoPreparo = modoPreparo;
         this.tempoPreparo = tempoPreparo;
@@ -32,7 +33,7 @@ public class Receita {
         return tempoPreparo;
     }
 
-    public String getCulinaria() {
+    public Culinaria getCulinaria() {
         return culinaria;
     }
 
@@ -48,9 +49,10 @@ public class Receita {
     public void adicionarIngrediente(IngredienteReceita ingrediente){
         for(IngredienteReceita i: ingredientes){
 			if(i.equals(ingrediente)){
-				ingredientes.add(ingrediente);
+				return;
 			}
 		}
+        ingredientes.add(ingrediente);
     }
 
     public boolean temCaracteristica(Caracteristica caracteristica){
@@ -73,4 +75,21 @@ public class Receita {
         Receita receita = (Receita) o;
         return Objects.equals(nome, receita.nome);
     }    
+
+    @Override
+    public boolean validar() {
+        if(nome==null){
+            return false;
+        }
+        if(modoPreparo==null){
+            return false;
+        }
+        if(tempoPreparo<=0){
+            return false;
+        }
+        if(culinaria==null){
+            return false;
+        }
+        return true;
+    }
 }
