@@ -16,4 +16,16 @@ public abstract class Restricao{
     }
 
     public abstract boolean permite(Receita receita);
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Restricao restricao = (Restricao) o;
+        return caracteristicasProibidas.equals(restricao.caracteristicasProibidas);
+    }
 } 
