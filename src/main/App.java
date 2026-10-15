@@ -19,7 +19,7 @@ public class App{
         Restricao IntoleranciaLactose = new Alergia(Caracteristica.LEITE);
         Restricao IntoleranciaCaseina = new Alergia(Caracteristica.LEITE);
         Restricao Vegana = new Alergia(Caracteristica.ORIGEM_ANIMAL);
-        Restricao Detox  = new Alergia(Caracteristica.ANTI_INFLAMATORIO);
+        Restricao Detox  = new Dieta(Caracteristica.ANTI_INFLAMATORIO);
         Detox.adicionarProibicao(Caracteristica.INFLAMATORIO);
 
         restricoes.add(Celiaco);
