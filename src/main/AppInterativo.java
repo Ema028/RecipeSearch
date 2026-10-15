@@ -44,6 +44,7 @@ public class AppInterativo extends App{
                     System.out.println("Limpando Filtros ...");
                     usuario = new Usuario();
                     System.out.println("Filtros zerados");
+                    break;
                 default:
                     System.out.println("Não é uma opção válida");
                     break;
