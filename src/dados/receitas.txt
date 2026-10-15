@@ -1,0 +1,66 @@
+
+Omelete simples|FRANCESA|10|Bata os ovos com sal. Aqueca a manteiga na frigideira, despeje os ovos e dobre quando firmar.
+ING|Ovo|3|un
+ING|Manteiga|1|colher de sopa
+ING|Sal|1|pitada
+
+Salmao grelhado com brocolis|FRANCESA|25|Tempere o salmao com sal, alho e limao. Grelhe por 4 minutos de cada lado. Cozinhe o brocolis no vapor e finalize com azeite.
+ING|Salmao|200|g
+ING|Brocolis|150|g
+ING|Azeite|1|colher de sopa
+ING|Alho|2|dente
+ING|Limao|1|un
+ING|Sal|1|pitada
+
+Macarrao ao pomodoro|ITALIANA|30|Cozinhe o macarrao. Refogue alho e tomate picado no azeite ate formar molho. Misture o macarrao, finalize com manjericao e parmesao.
+ING|Macarrao de trigo|200|g
+ING|Tomate|4|un
+ING|Alho|2|dente
+ING|Azeite|2|colher de sopa
+ING|Manjericao|5|folha
+ING|Queijo parmesao|30|g
+
+Tapioca com banana|BRASILEIRA|10|Espalhe a goma em frigideira antiquecida ate formar a massa. Recheie com banana fatiada e dobre.
+ING|Goma de tapioca|4|colher de sopa
+ING|Banana|1|un
+
+Tofu salteado com legumes|JAPONESA|20|Corte o tofu em cubos e doure. Adicione brocolis e cenoura, refogue com gengibre e finalize com molho de soja.
+ING|Tofu|200|g
+ING|Brocolis|100|g
+ING|Cenoura|1|un
+ING|Gengibre|1|colher de cha
+ING|Molho de soja|2|colher de sopa
+
+Arroz com feijao|BRASILEIRA|40|Refogue alho e cebola, adicione o arroz e agua e cozinhe. Prepare o feijao cozido separadamente com sal e sirva junto.
+ING|Arroz|1|xicara
+ING|Feijao|1|xicara
+ING|Alho|2|dente
+ING|Cebola|1|un
+ING|Agua|2|xicara
+ING|Sal|1|pitada
+
+Cha de curcuma e gengibre|BRASILEIRA|10|Ferva a agua com curcuma e gengibre por 5 minutos. Coe e adicione o suco de limao.
+ING|Agua|300|ml
+ING|Curcuma|1|colher de cha
+ING|Gengibre|1|colher de cha
+ING|Limao|1|un
+
+Tacos de frango|MEXICANA|30|Grelhe o frango em tiras. Monte as tortillas com frango, tomate, cebola e abacate e finalize com limao.
+ING|Tortilla de milho|4|un
+ING|Peito de frango|200|g
+ING|Tomate|2|un
+ING|Cebola|1|un
+ING|Abacate|1|un
+ING|Limao|1|un
+
+Salada de couve com abacate|BRASILEIRA|10|Corte a couve bem fina e massageie com azeite e limao. Misture o abacate em cubos e sirva.
+Couve|3|folha
+Abacate|1|un
+Azeite|1|colher de sopa
+Limao|1|un
+Sal|1|pitada
+
+Panqueca de banana com pasta de amendoim|BRASILEIRA|15|Amasse a banana, misture com os ovos e doure em frigideira antiaderente. Sirva com a pasta de amendoim por cima.
+Banana|1|un
+Ovo|2|un
+Pasta de amendoim|3|colher de sopa

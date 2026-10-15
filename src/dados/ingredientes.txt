@@ -1,0 +1,29 @@
+Ovo|OVO,ORIGEM_ANIMAL
+Leite|LEITE,ORIGEM_ANIMAL
+Manteiga|LEITE,ORIGEM_ANIMAL
+Queijo parmesao|LEITE,ORIGEM_ANIMAL
+Salmao|ORIGEM_ANIMAL,ANTI_INFLAMATORIO
+Peito de frango|ORIGEM_ANIMAL
+Macarrao de trigo|GLUTEN
+Molho de soja|SOJA,GLUTEN
+Tofu|SOJA
+Pasta de amendoim|AMENDOIM
+Azeite|ANTI_INFLAMATORIO
+Alho|ANTI_INFLAMATORIO
+Curcuma|ANTI_INFLAMATORIO
+Gengibre|ANTI_INFLAMATORIO
+Brocolis|ANTI_INFLAMATORIO
+Couve|ANTI_INFLAMATORIO
+Abacate|
+Banana|
+Tomate|
+Cebola|
+Cenoura|
+Limao|
+Manjericao|
+Arroz|
+Feijao|
+Goma de tapioca|
+Tortilla de milho|
+Agua|
+Sal|
