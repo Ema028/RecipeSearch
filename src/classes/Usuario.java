@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Usuario {
     private ArrayList<Restricao> restricoes;
 
-    public Usuario(String nome){
+    public Usuario(){
         this.restricoes = new ArrayList<>();
     }
 

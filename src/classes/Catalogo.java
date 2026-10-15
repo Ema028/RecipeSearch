@@ -32,9 +32,15 @@ public class Catalogo implements Descritivel{
 		Collections.sort(receitas, Comparator.comparingInt(Receita::getTempoPreparo));
 	}
 
+	public void filtrarReceitas(Usuario usuario){
+		for(Receita r: receitas){
+			if(usuario.aceita(r)) r.printInfo();
+		}
+	}
+
 	@Override 
 	public void printInfo(){
-		System.out.println("Menu de Recceitas: ");
+		System.out.println("Menu de Receitas: ");
     	for(Receita r: receitas){
 			r.printInfo();
 		}
