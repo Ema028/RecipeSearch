@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class AppInterativo extends App{
     private Usuario usuario = new Usuario();
-    private int opcao;
+    private int opcao = -1;
 
     public void menuInterativo(){
         Scanner scanner = new Scanner(System.in);
