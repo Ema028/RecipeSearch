@@ -10,8 +10,8 @@ public class Usuario {
     }
 
     public boolean temRestricao(Restricao restricao){
-        for(Restricao c: restricoes){
-			if(c.equals(restricao)){
+        for(Restricao r: restricoes){
+			if(r.getCaracteristicaProibida() == restricao.getCaracteristicaProibida()){
 				return true;
 			}
 		}

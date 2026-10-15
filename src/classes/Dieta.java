@@ -5,16 +5,16 @@ import enums.Caracteristica;
 public class Dieta extends Restricao {
     protected Caracteristica caracteristicaDesejada;
 
-    public Dieta(Caracteristica caracteristicasDesejada){
+    public Dieta(Caracteristica caracteristicaProibida, Caracteristica caracteristicasDesejada){
+        super(caracteristicaProibida);
         this.caracteristicaDesejada=caracteristicasDesejada;
     }
 
     public boolean permite(Receita receita){
-        for(Caracteristica i : caracteristicasProibidas){
-            if(receita.temCaracteristica(i)){
+        if(receita.temCaracteristica(caracteristicaProibida)){
                 return false;
-            }
         }
+
         if(receita.temCaracteristica(caracteristicaDesejada)){
             return true;
         }
