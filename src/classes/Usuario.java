@@ -28,6 +28,15 @@ public class Usuario implements Validavel {
         }
     }
 
+    public boolean aceita(Receita receita){ //se uma receita é compatível com todas as restrições cadastradas
+        for (Restricao restricao : restricoes){
+            if (!restricao.permite(receita)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     @Override 
     public boolean validar(){
         if(nome==null){
