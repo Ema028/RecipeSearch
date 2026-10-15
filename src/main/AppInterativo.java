@@ -51,6 +51,7 @@ public class AppInterativo extends App{
             }
             System.out.println("Gostaria de: ");
             System.out.println("0-Sair, 1-Voltar ao Menu");
+            opcao = scanner.nextInt();
         }
         scanner.close();
     }

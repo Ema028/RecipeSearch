@@ -18,6 +18,8 @@ public class Ingrediente implements Descritivel{
 
 	public Ingrediente(String nome, Caracteristica... caracteristicas) {
 		if(nome != null) this.nome = nome;
+		this.caracteristicas = new ArrayList<>();
+		this.receitas = new ArrayList<>();
         for (Caracteristica c : caracteristicas) {
             this.adicionarCaracteristica(c);
         }
