@@ -5,10 +5,18 @@ import java.util.ArrayList;
 import enums.Caracteristica;
 
 public abstract class Restricao{
+    protected String nome;
     protected ArrayList<Caracteristica> caracteristicasProibidas;
 
     public Restricao(){
         this.caracteristicasProibidas = new ArrayList<>();
+	}
+
+    public Restricao(Caracteristica... caracteristicas){
+        this.caracteristicasProibidas = new ArrayList<>();
+        for (Caracteristica c : caracteristicas) {
+            this.adicionarProibicao(c);
+        }
 	}
 
     public void adicionarProibicao(Caracteristica caracteristica){

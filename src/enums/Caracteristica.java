@@ -7,5 +7,6 @@ public enum Caracteristica{
     GLUTEN,
     SOJA,
     ORIGEM_ANIMAL,
-    ANTI_INFLAMATORIO
+    ANTI_INFLAMATORIO,
+    INFLAMATORIO
 }

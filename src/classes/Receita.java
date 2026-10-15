@@ -9,7 +9,7 @@ import interfaces.Descritivel;
 public class Receita implements Descritivel {
     private String nome;
     private String modoPreparo;
-    private int tempoPreparo;
+    private int tempoPreparo; //minutos
     private Culinaria culinaria;
     private ArrayList<IngredienteReceita> ingredientes;
 
