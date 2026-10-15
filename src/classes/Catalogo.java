@@ -28,15 +28,10 @@ public class Catalogo implements Descritivel{
 
 	@Override 
 	public void printInfo(){
-		this.printNome();
+		System.out.println("Menu de Recceitas: ");
     	for(Receita r: receitas){
 			r.printInfo();
 		}
-	}
-
-	@Override
-	public void printNome() {
-		System.out.println("Menu de Receitas");
 	}
 }
 

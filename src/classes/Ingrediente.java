@@ -54,15 +54,10 @@ public class Ingrediente implements Descritivel{
 		System.out.println("");
 		System.out.println("Receitas: ");
 		for(Receita r: receitas){
-			r.printNome();
+			System.out.print(r.getNome());
 			System.out.print(" | ");
 		}
 		System.out.println("");
 	}
 
-	@Override
-	public void printNome() {
-		System.out.print(nome);
-	}
-	
 }

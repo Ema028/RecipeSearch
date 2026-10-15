@@ -84,8 +84,4 @@ public class Receita implements Descritivel {
         System.out.println("Modo de preparo: "+ modoPreparo);
     }
 
-    @Override 
-    public void printNome(){
-        System.out.print(nome);
-    }
 }
