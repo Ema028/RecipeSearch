@@ -14,9 +14,9 @@ public class Receita implements Validavel {
     private ArrayList<IngredienteReceita> ingredientes;
 
     public Receita(String nome, String modoPreparo, int tempoPreparo, Culinaria culinaria) {
-        this.nome = nome;
-        this.modoPreparo = modoPreparo;
-        this.tempoPreparo = tempoPreparo;
+        if(nome != null) this.nome = nome;
+        if(modoPreparo != null) this.modoPreparo = modoPreparo;
+        if(tempoPreparo > 0) this.tempoPreparo = tempoPreparo;
         this.culinaria = culinaria;
         this.ingredientes = new ArrayList<>();
     }

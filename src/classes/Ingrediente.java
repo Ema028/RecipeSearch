@@ -11,7 +11,7 @@ public class Ingrediente implements Validavel{
 	private ArrayList<Receita> receitas;
 
 	public Ingrediente(String nome){
-        this.nome = nome;
+		if(nome != null) this.nome = nome;
         this.caracteristicas = new ArrayList<>();
 		this.receitas = new ArrayList<>();
 	}

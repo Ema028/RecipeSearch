@@ -8,18 +8,9 @@ public class IngredienteReceita {
     private String unidade;
 
     public IngredienteReceita(Ingrediente ingrediente, double quantidade, String unidade) {
-        if (ingrediente == null){
-            System.out.println("Erro: o ingrediente não pode ser nulo!");
-        }
-        if (quantidade <= 0){
-            System.out.println("Erro: deve ser maior que zero!");
-        }
-        if (unidade == null){
-            System.out.println("Erro: a unidade não pode ser nula!");
-        }
-        this.ingrediente = ingrediente;
-        this.quantidade = quantidade;
-        this.unidade = unidade;
+        if (ingrediente != null) this.ingrediente = ingrediente;
+        if (quantidade > 0) this.quantidade = quantidade;
+        if (unidade != null) this.unidade = unidade;
     }
 
     public Ingrediente getIngrediente() {
