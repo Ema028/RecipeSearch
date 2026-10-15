@@ -1,6 +1,8 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import interfaces.Descritivel;
 
@@ -24,6 +26,10 @@ public class Catalogo implements Descritivel{
     	if (!temReceita(receita)){
         	receitas.add(receita);
     	}
+	}
+
+	public void ordenarPorTempoPreparo(){
+		Collections.sort(receitas, Comparator.comparingInt(Receita::getTempoPreparo));
 	}
 
 	@Override 
