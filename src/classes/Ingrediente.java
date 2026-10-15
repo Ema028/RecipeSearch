@@ -3,9 +3,9 @@ package classes;
 import java.util.ArrayList;
 
 import enums.Caracteristica;
-import interfaces.Validavel;
+import interfaces.Descritivel;
 
-public class Ingrediente implements Validavel{
+public class Ingrediente implements Descritivel{
 	private String nome;
 	private ArrayList<Caracteristica> caracteristicas;
 	private ArrayList<Receita> receitas;
@@ -43,11 +43,26 @@ public class Ingrediente implements Validavel{
     	return new ArrayList<>(caracteristicas);
 	}
 	
-	public boolean validar(){
-		if(nome== null){
-			return false;
+	@Override
+	public void printInfo(){
+		System.out.println("Ingrediente: "+ nome);
+		System.out.println("Caracteristicas: ");
+		for(Caracteristica c: caracteristicas){
+			System.out.print(c);
+			System.out.print(" | ");
 		}
-		return true;
+		System.out.println("");
+		System.out.println("Receitas: ");
+		for(Receita r: receitas){
+			r.printNome();
+			System.out.print(" | ");
+		}
+		System.out.println("");
+	}
+
+	@Override
+	public void printNome() {
+		System.out.print(nome);
 	}
 	
 }
