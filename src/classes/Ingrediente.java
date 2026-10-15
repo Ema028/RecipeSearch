@@ -34,7 +34,7 @@ public class Ingrediente implements Validavel{
 	}
 
 	public ArrayList<Caracteristica> getCaracteristicas() {
-    	return caracteristicas;
+    	return new ArrayList<>(caracteristicas);
 	}
 	
 	public boolean validar(){

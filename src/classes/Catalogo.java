@@ -24,8 +24,10 @@ public class Catalogo {
     	}
 	}
 
-	public ArrayList<Receita> getReceitas(){
-    	return receitas;
+	public void printReceitas(){
+    	for(Receita r: receitas){
+			r.printInfo();
+		}
 	}
 }
 
