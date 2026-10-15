@@ -55,6 +55,11 @@ public class Receita implements Validavel {
         ingredientes.add(ingrediente);
     }
 
+    public void adicionarIngrediente(Ingrediente ingrediente, double quantidade, String unidade){
+        IngredienteReceita i = new IngredienteReceita(ingrediente, quantidade, unidade);
+        this.adicionarIngrediente(i);
+    }
+
     public boolean temCaracteristica(Caracteristica caracteristica){
         for(IngredienteReceita i: ingredientes){
 			if(i.getIngrediente().temCaracteristica(caracteristica)){
