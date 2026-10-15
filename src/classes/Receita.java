@@ -53,6 +53,7 @@ public class Receita implements Validavel {
 			}
 		}
         ingredientes.add(ingrediente);
+        ingrediente.getIngrediente().adicionarReceita(this);
     }
 
     public void adicionarIngrediente(Ingrediente ingrediente, double quantidade, String unidade){

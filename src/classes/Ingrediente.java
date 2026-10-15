@@ -8,10 +8,12 @@ import interfaces.Validavel;
 public class Ingrediente implements Validavel{
 	private String nome;
 	private ArrayList<Caracteristica> caracteristicas;
+	private ArrayList<Receita> receitas;
 
 	public Ingrediente(String nome){
         this.nome = nome;
         this.caracteristicas = new ArrayList<>();
+		this.receitas = new ArrayList<>();
 	}
 	
 	public boolean temCaracteristica(Caracteristica caracteristica){
@@ -27,6 +29,10 @@ public class Ingrediente implements Validavel{
         if (!temCaracteristica(caracteristica)){
             caracteristicas.add(caracteristica);
         }
+    }
+
+	public void adicionarReceita(Receita receita){
+        receitas.add(receita);
     }
 
 	public String getNome(){
