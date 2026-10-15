@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Objects;
 import enums.Caracteristica;
 import enums.Culinaria;
-import interfaces.Validavel;
+import interfaces.Descritivel;
 
-public class Receita implements Validavel {
+public class Receita implements Descritivel {
     private String nome;
     private String modoPreparo;
     private int tempoPreparo;
@@ -14,9 +14,9 @@ public class Receita implements Validavel {
     private ArrayList<IngredienteReceita> ingredientes;
 
     public Receita(String nome, String modoPreparo, int tempoPreparo, Culinaria culinaria) {
-        this.nome = nome;
-        this.modoPreparo = modoPreparo;
-        this.tempoPreparo = tempoPreparo;
+        if(nome != null) this.nome = nome;
+        if(modoPreparo != null) this.modoPreparo = modoPreparo;
+        if(tempoPreparo > 0) this.tempoPreparo = tempoPreparo;
         this.culinaria = culinaria;
         this.ingredientes = new ArrayList<>();
     }
@@ -37,15 +37,6 @@ public class Receita implements Validavel {
         return culinaria;
     }
 
-    public void printInfo(){
-        System.out.println("Receita: "+ nome);
-        System.out.println("Lista de Ingredientes: ");
-        for(IngredienteReceita i: ingredientes){
-			i.printInfo();
-		}
-        System.out.println("Modo de preparo: "+ modoPreparo);
-    }
-
     public void adicionarIngrediente(IngredienteReceita ingrediente){
         for(IngredienteReceita i: ingredientes){
 			if(i.equals(ingrediente)){
@@ -53,6 +44,12 @@ public class Receita implements Validavel {
 			}
 		}
         ingredientes.add(ingrediente);
+        ingrediente.getIngrediente().adicionarReceita(this);
+    }
+
+    public void adicionarIngrediente(Ingrediente ingrediente, double quantidade, String unidade){
+        IngredienteReceita i = new IngredienteReceita(ingrediente, quantidade, unidade);
+        this.adicionarIngrediente(i);
     }
 
     public boolean temCaracteristica(Caracteristica caracteristica){
@@ -77,19 +74,18 @@ public class Receita implements Validavel {
     }    
 
     @Override
-    public boolean validar() {
-        if(nome==null){
-            return false;
-        }
-        if(modoPreparo==null){
-            return false;
-        }
-        if(tempoPreparo<=0){
-            return false;
-        }
-        if(culinaria==null){
-            return false;
-        }
-        return true;
+    public void printInfo(){
+        System.out.println("Receita: "+ nome);
+        System.out.println("Tempo de preparo: "+ tempoPreparo);
+        System.out.println("Lista de Ingredientes: ");
+        for(IngredienteReceita i: ingredientes){
+			i.printInfo();
+		}
+        System.out.println("Modo de preparo: "+ modoPreparo);
+    }
+
+    @Override 
+    public void printNome(){
+        System.out.print(nome);
     }
 }

@@ -2,7 +2,9 @@ package classes;
 
 import java.util.ArrayList;
 
-public class Catalogo {
+import interfaces.Descritivel;
+
+public class Catalogo implements Descritivel{
     private ArrayList<Receita> receitas;
 
     public Catalogo() {
@@ -24,8 +26,17 @@ public class Catalogo {
     	}
 	}
 
-	public ArrayList<Receita> getReceitas(){
-    	return receitas;
+	@Override 
+	public void printInfo(){
+		this.printNome();
+    	for(Receita r: receitas){
+			r.printInfo();
+		}
+	}
+
+	@Override
+	public void printNome() {
+		System.out.println("Menu de Receitas");
 	}
 }
 

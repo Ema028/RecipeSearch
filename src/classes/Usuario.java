@@ -2,14 +2,10 @@ package classes;
 
 import java.util.ArrayList;
 
-import interfaces.Validavel;
-
-public class Usuario implements Validavel {
-    private String nome;
+public class Usuario {
     private ArrayList<Restricao> restricoes;
 
     public Usuario(String nome){
-        this.nome = nome;
         this.restricoes = new ArrayList<>();
     }
 
@@ -33,14 +29,6 @@ public class Usuario implements Validavel {
             if (!restricao.permite(receita)) {
                 return false;
             }
-        }
-        return true;
-    }
-
-    @Override 
-    public boolean validar(){
-        if(nome==null){
-            return false;
         }
         return true;
     }

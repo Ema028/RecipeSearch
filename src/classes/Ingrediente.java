@@ -3,15 +3,17 @@ package classes;
 import java.util.ArrayList;
 
 import enums.Caracteristica;
-import interfaces.Validavel;
+import interfaces.Descritivel;
 
-public class Ingrediente implements Validavel{
+public class Ingrediente implements Descritivel{
 	private String nome;
 	private ArrayList<Caracteristica> caracteristicas;
+	private ArrayList<Receita> receitas;
 
 	public Ingrediente(String nome){
-        this.nome = nome;
+		if(nome != null) this.nome = nome;
         this.caracteristicas = new ArrayList<>();
+		this.receitas = new ArrayList<>();
 	}
 	
 	public boolean temCaracteristica(Caracteristica caracteristica){
@@ -29,19 +31,38 @@ public class Ingrediente implements Validavel{
         }
     }
 
+	public void adicionarReceita(Receita receita){
+        receitas.add(receita);
+    }
+
 	public String getNome(){
     	return nome;
 	}
 
 	public ArrayList<Caracteristica> getCaracteristicas() {
-    	return caracteristicas;
+    	return new ArrayList<>(caracteristicas);
 	}
 	
-	public boolean validar(){
-		if(nome== null){
-			return false;
+	@Override
+	public void printInfo(){
+		System.out.println("Ingrediente: "+ nome);
+		System.out.println("Caracteristicas: ");
+		for(Caracteristica c: caracteristicas){
+			System.out.print(c);
+			System.out.print(" | ");
 		}
-		return true;
+		System.out.println("");
+		System.out.println("Receitas: ");
+		for(Receita r: receitas){
+			r.printNome();
+			System.out.print(" | ");
+		}
+		System.out.println("");
+	}
+
+	@Override
+	public void printNome() {
+		System.out.print(nome);
 	}
 	
 }
