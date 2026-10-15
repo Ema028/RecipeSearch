@@ -18,7 +18,7 @@ public class IngredienteReceita {
     }
 
     public void printInfo(){
-        System.out.printf("%f%s de %s\n", quantidade, unidade, ingrediente.getNome());
+        System.out.printf("%.1f%s de %s\n", quantidade, unidade, ingrediente.getNome());
     }
 
     public double getQuantidade() {
